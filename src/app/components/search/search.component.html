@@ -1,0 +1,15 @@
+<div class="first">
+       <div class="input-group mb-3"> <!-- ngModel is splited for the titlecase pipe -->
+        <input type="text" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2"
+            [ngModel]="search |titlecase" (keydown)="filterRegex($event);resetMessageToUser($event)" (ngModelChange)="search=$event" placeholder="Enter a city name">
+        <div class="input-group-append">
+            <button (click)="getTheWeather()" class="btn btn-outline-secondary" id="basic-addon2">Enter</button>
+        </div>
+    </div>
+    <div class="input-group-append" *ngIf="regexAnnouncement">
+        <label>{{regexAnnouncement}}</label>
+    </div>
+    <div class="input-group-append" *ngIf="messageToUser">
+        <label>{{messageToUser}}</label>
+    </div>
+</div>

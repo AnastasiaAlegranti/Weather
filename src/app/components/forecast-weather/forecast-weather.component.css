@@ -1,0 +1,38 @@
+/* .card{
+    height: 200px;  
+    width:200px;
+    margin:0;
+    padding:0;
+    text-align: center;
+ }
+ 
+ .first{
+     height: 200px;
+     width:200px;
+     display:inline-block;
+     margin:5px;
+     padding:0;      
+ } */
+ div{
+     display: inline-block;
+  
+ }
+ table{
+    margin:0 auto;
+ }
+
+ .inner{
+  width: 150px;
+   /* height: 200px; */
+   text-align: center;
+   min-height: 170px;
+ }
+ .first{
+     margin:0px;
+     padding:0px;
+ }
+ th:hover{
+     background-color:  rgb(156, 232, 241);
+ }
+
+

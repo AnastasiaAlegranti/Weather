@@ -1,0 +1,55 @@
+<div *ngIf="weather">
+    <div class="card">
+        <div class="card-body">
+            <div class="title">
+                <h5 class="card-title">{{weather.location.name}} | {{weather.location.country}}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    {{weather.current.last_updated}}
+                    {{weather.current.last_updated| date:'EEEE'}}
+                    <img src="{{weather.current.condition.icon}}">
+                    {{weather.current.temp_c}} &#8451;
+                </h6>
+                <h5 class="card-subtitle mb-2 text-muted">
+                    Forecast for
+                    {{weather.forecast.forecastday[dayIndex].date| date:'EEEE'}}
+                    {{weather.forecast.forecastday[dayIndex].date}}:
+                    {{weather.forecast.forecastday[dayIndex].day.condition.text}}
+                    <img src="{{weather.forecast.forecastday[dayIndex].day.condition.icon}}">
+                    {{weather.forecast.forecastday[dayIndex].day.mintemp_c}}&#8451; -
+                    {{weather.forecast.forecastday[dayIndex].day.maxtemp_c}}&#8451;
+                </h5>
+                <div class="icon">
+                    <img src="assets/images/humidity.png">
+                    <h6 class="card-text mb-2 text-muted">
+                        {{weather.forecast.forecastday[dayIndex].day.avghumidity}}%
+                    </h6>
+                </div>
+                <div class="icon">
+                    <img src="assets/images/wind.jpg">
+                    <h6 class="card-text mb-2 text-muted">
+                        {{weather.forecast.forecastday[dayIndex].day.maxwind_kph}} km/h
+                    </h6>
+                </div>
+                <div class="icon">
+                    <img src="assets/images/sunrise.png">
+                    <h6 class="card-text mb-2 text-muted">
+                        {{weather.forecast.forecastday[dayIndex].astro.sunrise}}
+                    </h6>
+                </div>
+                <div class="icon">
+                    <img src="assets/images/sunset.png">
+                    <h6 class="card-text mb-2 text-muted">{{weather.forecast.forecastday[dayIndex].astro.sunset}}</h6>
+                </div>
+                <div class="icon">
+                    <img src="assets/images/moonrise.png">
+                    <h6 class="card-text mb-2 text-muted">
+                        {{weather.forecast.forecastday[dayIndex].astro.moonrise}}
+                    </h6>
+                </div>
+                <div class="icon">
+                    <img src="assets/images/moonset2.png">
+                    <h6 class="card-text mb-2 text-muted">{{weather.forecast.forecastday[dayIndex].astro.moonset}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>

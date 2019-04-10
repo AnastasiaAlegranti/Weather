@@ -1,0 +1,3 @@
+<app-search (weatherEvent)="getWeather($event)"></app-search>
+<app-current-weather [weather]="weather" [dayIndex]="dayIndex"></app-current-weather>
+<app-forecast-weather [weather]="weather" (dayIndex)="getDayIndex($event)"></app-forecast-weather>

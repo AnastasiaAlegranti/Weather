@@ -1,0 +1,14 @@
+<div class="col-xl table table-responsive  table-sm" *ngIf="weather?.forecast.forecastday" ngClass="first">
+    <table >
+            <tr>
+                <th *ngFor="let w of weather?.forecast.forecastday; let i=index" (click)="getDayNumber(i)">
+                    <div class="table" ngClass="inner">
+                        <h5  class="card-text mb-2 text-muted">{{w.date | date:'EEEE'}}</h5>
+                        <img src="{{w.day.condition.icon}}">
+                        <h6 class="card-text mb-2 text-muted">{{w.day.mintemp_c}}&#8451; - {{w.day.maxtemp_c}}&#8451;</h6>
+                            <h6 class="card-text mb-2 text-muted">{{w.day.condition.text}}</h6>
+                    </div>
+                </th>
+            </tr>
+    </table>
+</div>
